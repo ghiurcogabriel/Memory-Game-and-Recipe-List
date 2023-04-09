@@ -1,0 +1,7 @@
+.CookingApp {
+    min-height: 100%;
+}
+
+.CookingApp.dark {
+    background: #333;
+}
