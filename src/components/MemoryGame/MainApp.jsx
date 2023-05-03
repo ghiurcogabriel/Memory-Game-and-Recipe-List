@@ -17,11 +17,11 @@ const MainApp = () => {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
-  const [isPending, setIsPending] = useState(false);
+  // const [isPending, setIsPending] = useState(false);
   // const [victory, setVictory] = useState('');
 
   const shuffleCards = () => {
-    setIsPending(true);
+    // setIsPending(true);
     const shuffled = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }));
@@ -66,7 +66,7 @@ const MainApp = () => {
   useEffect(() => {
     // setIsPending(true);
     shuffleCards();
-    setIsPending(false);
+    // setIsPending(false);
   }, []);
 
   // console.log(cards);
@@ -101,7 +101,7 @@ const MainApp = () => {
         <button onClick={shuffleCards}>New Game</button>
         <div className="container">
           <div className="card-grid">
-            {isPending && <div>Loading..</div>}
+            {/* {isPending && <div>Loading..</div>} */}
             {cards.map((card) => (
               <SingleCard
                 key={card.id}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import RecipeList from "../../common/RecipeList";
-import { collection, getDocs, onSnapshot } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 import { db } from "../../firebase/firebase";
 
@@ -22,7 +22,6 @@ const HomeReceipe = () => {
         } else {
           let results = [];
           snapshot.docs.forEach((doc) => {
-            // console.log(doc.id)
             results.push({ ...doc.data(), id: doc.id });
           });
           setData(results);

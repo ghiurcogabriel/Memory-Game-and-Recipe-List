@@ -42,7 +42,6 @@ export const useFetch = (url, method= 'GET') => {
         setError(null);
       } catch (err) {
         if (err.name === "AbortError") {
-          // console.log("the fetch was aborted");
         } else {
           setIsPending(false);
           setError('Could not fetch the data! Redirecting home...');

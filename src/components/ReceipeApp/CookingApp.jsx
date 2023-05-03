@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-// import MainReceipeApp from './MainReceipeApp';
 import './CookingApp.css';
 
 //pages 
@@ -21,7 +20,6 @@ const CookingApp = () => {
     <div className={`CookingApp ${mode}`}>
         <Navbar />
         <ThemeSelector />
-        {/* <HomeReceipe /> */}
         <Routes>
             <Route exact path='/' element={<HomeReceipe />}></Route>
             <Route path='/create' element={<Create />}></Route>

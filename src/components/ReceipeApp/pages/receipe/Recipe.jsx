@@ -28,13 +28,11 @@ const Recipe = () => {
     setIsPending(true);
 
     getDoc(doc(db, `recipes/${idParam}`)).then((snap) => {
-      // console.log(snap);
       if (snap.exists) {
         console.log('good')
         setIsPending(false)
         setRecipe(snap.data())
       } else {
-        console.log('error')
         setIsPending(false)
         setError(`Could not find that recipe`)
       }
